@@ -1,0 +1,44 @@
+.social {
+  @include base-flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__link {
+  position: relative;
+  display: block;
+  color: $main-text-color;
+
+  &:focus,
+  &:hover {
+    color: $button-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    margin-left: 103px;
+    padding-top: 0;
+    order: 4;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social {
+    justify-content: space-between;
+    align-items: center;
+    width: 106px;
+    margin-left: 0;
+    padding-top: 12px;
+  }
+
+  .social__item:not(:last-child) {
+    margin-right: 0;
+  }
+}
